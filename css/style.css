@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 400 1rem 'PT Sans', sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1114px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.btn {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 30px;
+}
+
+.btn-default {
+  width: auto;
+  background: linear-gradient(
+  90deg,
+  #0cebeb 0%,
+  #20e3b2 50%,
+  #29ffc6 100%
+  );
+  box-shadow: 0px 4px 20px rgba(32, 228, 179, 0.85);
+  border-radius: 30px;
+  color: #fff;
+}
+
+.header {
+  padding: 40px 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.main {
+  background: url('../img/inner-bg.png') no-repeat, url('../img/footer-bg.png') no-repeat bottom;
+  background-size: contain;
+}
+
+.main-header-nav {
+  color: #fff;
+  font-weight: 700;
+  margin-left: 66px;
+}
+
+.main-header-nav a + a, .info-header-nav a + a {
+  margin-left: 30px;
+}
+
+.info-header-nav {
+  color: #fff;
+  margin-left: auto;
+}
+
+.inner {
+  padding-top: 106px;
+  height: 930px;
+}
+
+.inner-call-to-action {
+  max-width: 610px;
+  position: relative;
+}
+
+.inner-call-to-action::after {
+  content: '';
+  width: 658px;
+  height: 571px;
+  background: url('../img/inner-picture.svg') no-repeat;
+  position: absolute;
+  top: -55px;
+  right: -600px;
+  z-index: 0;
+}
+
+.inner-call-title {
+  font-size: 3.43rem;
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.29;
+  margin-top: 55px;
+  z-index: 1;
+}
+
+.inner-call-text {
+  font-size: 1.28rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.33;
+  margin-top: 20px;
+  margin-bottom: 45px;
+  max-width: 385px;
+}
+
+.inner-call-text > span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.test-your-email {
+  display: inline-block;
+}
+
+.email-not-required {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.71;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.email-not-required span {
+  margin-left: 15px;
+}
+
+.inner-services-wrap {
+  margin: 0;
+}
+
+.email-providers {
+  width: 600px;
+}
+
+.email-providers-title {
+  color: #27debf;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.email-providers-text {
+  font-size: 2.57rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #29375a;
+}
+
+.inner-services-list-item {
+  width: 164px;
+  height: 164px;
+  cursor: pointer;
+}
+
+.inner-services-list-item + .inner-services-list-item {
+  margin-left: 10px;
+}
+
+.inner-services-list-item:hover {
+  background-color: #fff;
+  box-shadow: 0px 2px 15px rgba(2, 71, 149, 0.15);
+  border-radius: 4px;
+}
+
+
