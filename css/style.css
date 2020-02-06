@@ -61,6 +61,10 @@ button {
   color: #fff;
 }
 
+.slicknav_menu {
+  display: none;
+}
+
 .header {
   padding: 40px 0;
   position: absolute;
@@ -86,7 +90,7 @@ button {
 
 .info-header-nav {
   color: #fff;
-  margin-left: auto;
+  margin-left: 425px;
 }
 
 .inner {
@@ -107,7 +111,6 @@ button {
   position: absolute;
   top: -55px;
   right: -600px;
-  z-index: 0;
 }
 
 .inner-call-title {
@@ -154,12 +157,13 @@ button {
 }
 
 .email-providers {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .email-providers-title {
   color: #27debf;
-  font-size: 1em;
+  font-size: 1rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -187,4 +191,161 @@ button {
   border-radius: 4px;
 }
 
+@media (max-width: 1199px) {
+  .info-header-nav {
+    margin-left: 300px;
+  }
 
+  .inner-call-to-action::after {
+    left: 600px;
+    top: 50px;
+    background-size: 350px;
+  }
+  .email-not-required {
+    color: #29375a;
+  }
+
+  .inner {
+    max-height: 700px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container{
+    padding: 0 25px;
+  }
+
+  .inner {
+    padding-top: 86px;
+  }
+
+  .gradient-bg {
+    background: linear-gradient(
+    to bottom,
+    #0072FF 0%,
+    #fff 100%
+    );
+  }
+
+  .main {
+    background: none;
+  }
+
+  .header {
+    padding: 30px 0;
+  }
+
+  .main-header-nav{
+    margin-left: 46px;
+  }
+
+  .main-header-nav a + a, .info-header-nav a + a {
+    margin-left: 20px;
+  }
+
+  .info-header-nav {
+    margin-left: 100px;
+  }
+
+  .inner-call-to-action::after {
+    left: 400px;
+    top: 50px;
+    background-size: 350px;
+  }
+
+  .inner-call-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #29375a;
+    margin-top: 30px;
+  }
+
+  .inner-call-text {
+    font-size: 1rem;
+    color: #29375a;
+    margin-bottom: 25px;
+  }
+
+  .inner-call-text > span {
+    color: #0cebeb;
+  }
+
+  .email-not-required {
+    color: #29375a;
+  }
+
+  .inner {
+    max-height: 550px;
+  }
+
+  .email-providers-text {
+    font-size: 2.07rem;
+  }
+
+  .inner-services-list-item {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .slicknav_menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .inner-call-to-action::after {
+    display: none;
+  }
+
+  .main-header-nav {
+    margin: 0;
+    text-align: right;
+    font-weight: 400;
+  }
+
+  .info-header-nav {
+    margin: 0;
+    text-align: right;
+    font-weight: 400;
+  }
+
+  .inner-call-to-action {
+    margin-top: 20px;
+  }
+
+  .inner-call-title {
+    font-size: 2.0rem;
+  }
+
+  .email-not-required {
+    font-size: 0.7rem;
+  }
+
+  .inner {
+    max-height: 450px;
+  }
+
+  .btn {
+    font-size: 0.5rem;
+    padding: 10px 24px;
+  }
+
+  .email-providers-text {
+    font-size: 1.07rem;
+  }
+
+  .inner-services-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 479px) {
+  .inner {
+    max-height: 480px;
+  }
+}
