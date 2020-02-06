@@ -61,10 +61,13 @@ button {
   color: #fff;
 }
 
+<<<<<<< HEAD
 .slicknav_menu {
   display: none;
 }
 
+=======
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
 .header {
   padding: 40px 0;
   position: absolute;
@@ -90,7 +93,11 @@ button {
 
 .info-header-nav {
   color: #fff;
+<<<<<<< HEAD
   margin-left: 425px;
+=======
+  margin-left: auto;
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
 }
 
 .inner {
@@ -111,6 +118,10 @@ button {
   position: absolute;
   top: -55px;
   right: -600px;
+<<<<<<< HEAD
+=======
+  z-index: 0;
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
 }
 
 .inner-call-title {
@@ -157,13 +168,21 @@ button {
 }
 
 .email-providers {
+<<<<<<< HEAD
   max-width: 600px;
   width: 100%;
+=======
+  width: 600px;
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
 }
 
 .email-providers-title {
   color: #27debf;
+<<<<<<< HEAD
   font-size: 1rem;
+=======
+  font-size: 1em;
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -191,6 +210,7 @@ button {
   border-radius: 4px;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1199px) {
   .info-header-nav {
     margin-left: 300px;
@@ -349,3 +369,6 @@ button {
     max-height: 480px;
   }
 }
+=======
+
+>>>>>>> 8f9b8de8a4c9ad06f3f220869a2c69d8d62fed66
