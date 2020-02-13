@@ -10,7 +10,8 @@
   float: right;
   padding: 0.438em 0.625em 0.438em 0.625em;
   line-height: 1.125em;
-  cursor: pointer; }
+  cursor: pointer;
+}
   .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
     margin-top: 0.188em; }
 

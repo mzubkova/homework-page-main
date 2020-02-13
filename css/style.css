@@ -65,6 +65,101 @@ button {
   display: none;
 }
 
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+@-webkit-keyframes hvr-pulse-shrink {
+  to {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  }
+}
+
+@keyframes hvr-pulse-shrink {
+  to {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  }
+}
+
+.hvr-pulse-shrink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  -webkit-animation-name: hvr-pulse-shrink;
+  animation-name: hvr-pulse-shrink;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.hvr-bounce-to-top {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.hvr-bounce-to-top:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-bounce-to-top:hover, .hvr-bounce-to-top:focus, .hvr-bounce-to-top:active {
+  color: white;
+}
+
+.hvr-bounce-to-top:hover:before, .hvr-bounce-to-top:focus:before, .hvr-bounce-to-top:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
 .header {
   padding: 40px 0;
   position: absolute;
@@ -73,9 +168,14 @@ button {
   top: 0;
 }
 
+.header-nav {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
 .main {
-  background: url('../img/inner-bg.png') no-repeat, url('../img/footer-bg.png') no-repeat bottom;
-  background-size: contain;
+  background: url('../img/inner-bg.png') no-repeat, url('../img/footer-bg.png') no-repeat right bottom;
+  background-size: 90% 56%, auto;
 }
 
 .main-header-nav {
@@ -90,16 +190,17 @@ button {
 
 .info-header-nav {
   color: #fff;
-  margin-left: 425px;
+  margin-left: auto;
 }
 
 .inner {
-  padding-top: 106px;
-  height: 930px;
+  height: 670px;
+  margin-bottom: 150px;
 }
 
 .inner-call-to-action {
   max-width: 610px;
+  padding-top: 106px;
   position: relative;
 }
 
@@ -109,8 +210,19 @@ button {
   height: 571px;
   background: url('../img/inner-picture.svg') no-repeat;
   position: absolute;
-  top: -55px;
+  top: 110px;
   right: -600px;
+  opacity: 0;
+  animation: opacity 0.2s ease-in-out 300ms forwards;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .inner-call-title {
@@ -119,6 +231,7 @@ button {
   color: #fff;
   line-height: 1.29;
   margin-top: 55px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
@@ -126,9 +239,8 @@ button {
   font-size: 1.28rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.33;
-  margin-top: 20px;
   margin-bottom: 45px;
-  max-width: 385px;
+  max-width: 425px;
 }
 
 .inner-call-text > span {
@@ -186,19 +298,14 @@ button {
 }
 
 .inner-services-list-item:hover {
-  background-color: #fff;
   box-shadow: 0px 2px 15px rgba(2, 71, 149, 0.15);
   border-radius: 4px;
 }
 
 @media (max-width: 1199px) {
-  .info-header-nav {
-    margin-left: 300px;
-  }
-
   .inner-call-to-action::after {
     left: 600px;
-    top: 50px;
+    top: 100px;
     background-size: 350px;
   }
 
@@ -244,13 +351,9 @@ button {
     margin-left: 20px;
   }
 
-  .info-header-nav {
-    margin-left: 100px;
-  }
-
   .inner-call-to-action::after {
-    left: 400px;
-    top: 50px;
+    left: 550px;
+    top: 110px;
     background-size: 350px;
   }
 
